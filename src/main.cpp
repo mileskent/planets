@@ -9,7 +9,7 @@
 #define WINW WINDOWSIZE
 #define WINH WINDOWSIZE
 
-// Make wrapper class for planet -> sf::CircleShape, mass
+// Make wrapper struct for planet -> sf::CircleShape, mass
 
 
 int main()
