@@ -1,3 +1,6 @@
+#include <iostream>
+#include <vector>
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/System/Vector2.hpp>
@@ -5,6 +8,8 @@
 #define WINDOWSIZE 600
 #define WINW WINDOWSIZE
 #define WINH WINDOWSIZE
+
+// Make wrapper class for planet -> sf::CircleShape, mass
 
 
 int main()
@@ -20,6 +25,8 @@ int main()
     earth.setFillColor(sf::Color::Blue);
     earth.setPosition(WINW / 1.5f, WINH / 2.0f);
 
+    std::vector<sf::CircleShape*> bodies = {&sun, &earth};
+
     while (window.isOpen())
     {
         // EVENTS
@@ -30,14 +37,18 @@ int main()
                 window.close();
         }
 
-        // PHYSICS
-//        shape.setPosition(shape.getPosition() + sf::Vector2(0.0f, 1.0f));
+        // GRAVITY
+        // F_g = K * m_1 * m_2 * r^-2
+        for (auto body : bodies) {
+            // body->move ( sf::Vector2(0.0f, 1.0f) );
+        }
 
         // NEW FRAME
 
         window.clear();
-        window.draw(sun);
-        window.draw(earth);
+        for (auto body : bodies) {
+            window.draw(*body);
+        }
         window.display();
     }
 

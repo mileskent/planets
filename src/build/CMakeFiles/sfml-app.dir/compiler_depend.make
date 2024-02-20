@@ -186,6 +186,7 @@ CMakeFiles/sfml-app.dir/main.cpp.o: /home/alexkca/planets/src/main.cpp \
   /usr/include/c++/13.2.1/bits/hash_bytes.h \
   /usr/include/c++/13.2.1/bits/invoke.h \
   /usr/include/c++/13.2.1/bits/ios_base.h \
+  /usr/include/c++/13.2.1/bits/istream.tcc \
   /usr/include/c++/13.2.1/bits/locale_classes.h \
   /usr/include/c++/13.2.1/bits/locale_classes.tcc \
   /usr/include/c++/13.2.1/bits/locale_conv.h \
@@ -258,6 +259,8 @@ CMakeFiles/sfml-app.dir/main.cpp.o: /home/alexkca/planets/src/main.cpp \
   /usr/include/c++/13.2.1/initializer_list \
   /usr/include/c++/13.2.1/ios \
   /usr/include/c++/13.2.1/iosfwd \
+  /usr/include/c++/13.2.1/iostream \
+  /usr/include/c++/13.2.1/istream \
   /usr/include/c++/13.2.1/iterator \
   /usr/include/c++/13.2.1/locale \
   /usr/include/c++/13.2.1/map \
@@ -389,6 +392,10 @@ CMakeFiles/sfml-app.dir/main.cpp.o: /home/alexkca/planets/src/main.cpp \
 
 /usr/include/c++/13.2.1/locale:
 
+/usr/include/c++/13.2.1/istream:
+
+/usr/include/c++/13.2.1/iosfwd:
+
 /usr/include/bits/timex.h:
 
 /usr/include/bits/errno.h:
@@ -478,6 +485,8 @@ CMakeFiles/sfml-app.dir/main.cpp.o: /home/alexkca/planets/src/main.cpp \
 /usr/include/SFML/Window/Context.hpp:
 
 /usr/include/SFML/Window/Clipboard.hpp:
+
+/usr/include/c++/13.2.1/bits/istream.tcc:
 
 /usr/include/SFML/System/ThreadLocalPtr.hpp:
 
@@ -663,8 +672,6 @@ CMakeFiles/sfml-app.dir/main.cpp.o: /home/alexkca/planets/src/main.cpp \
 
 /usr/include/c++/13.2.1/cstdlib:
 
-/usr/include/c++/13.2.1/iosfwd:
-
 /usr/include/SFML/Graphics/Image.hpp:
 
 /usr/include/SFML/System/Vector3.hpp:
@@ -784,6 +791,8 @@ CMakeFiles/sfml-app.dir/main.cpp.o: /home/alexkca/planets/src/main.cpp \
 /usr/include/bits/types/locale_t.h:
 
 /usr/include/c++/13.2.1/bits/allocator.h:
+
+/usr/include/c++/13.2.1/iostream:
 
 /usr/include/bits/types/mbstate_t.h:
 
