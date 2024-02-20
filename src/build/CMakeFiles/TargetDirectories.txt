@@ -1,0 +1,3 @@
+/home/alexkca/planets/src/build/CMakeFiles/sfml-app.dir
+/home/alexkca/planets/src/build/CMakeFiles/edit_cache.dir
+/home/alexkca/planets/src/build/CMakeFiles/rebuild_cache.dir
