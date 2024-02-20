@@ -13,7 +13,7 @@
 constexpr int FPS = 60;
 constexpr float deltatime = 1.0f / FPS;
 
-#define G 10.0f
+#define G 30.0f
 
 class Planet : public sf::CircleShape{
 public:
@@ -35,13 +35,14 @@ public:
 
 int main()
 {
-    Planet sun(100, WINDOWSIZE / 30.0f);
+    Planet sun(1000, WINDOWSIZE / 30.0f);
     sun.setFillColor(sf::Color::Yellow);
     sun.setPosition(WINW / 2.0f, WINH / 2.0f);
 
     Planet earth(1, WINDOWSIZE / 90.0f);
     earth.setFillColor(sf::Color::Blue);
     earth.setPosition(WINW / 1.5f, WINH / 2.0f);
+    earth.velocity = sf::Vector2 (-1.0f, 2.0f);
 
     std::vector<Planet*> bodies = {&sun, &earth};
     
@@ -80,6 +81,14 @@ int main()
             //  a = netForce/m -> v = netForce/m * t
             bodies.at(b)->velocity += netforce / bodies.at(b)->mass * deltatime;
             bodies.at(b)->move(bodies.at(b)->velocity);
+            
+            // wrapping
+            sf::Vector2<float> pos = bodies.at(b)->getPosition();
+//            std::cout << pos.x << ", " << pos.y << "\n";
+            if (pos.y < 0) bodies.at(b)->setPosition(pos.x, WINH);
+            else if (pos.y > WINH) bodies.at(b)->setPosition(pos.x, 0);
+            if (pos.x < 0) bodies.at(b)->setPosition(WINW, pos.y);
+            else if (pos.x > WINW) bodies.at(b)->setPosition(pos.y, 0);
         }
 
 
