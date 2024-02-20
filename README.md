@@ -5,7 +5,7 @@
 ```
 pacman -S sfml cmake
 ```
-###Debian
+### Debian
 ```
 sudo apt-get install libsfml-dev
 ```
